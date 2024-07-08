@@ -15,12 +15,12 @@
 			<div class="row text-center px-4 fs-3 my-5">
 				<div class="col d-flex align-items-center justify-content-center mx-2 rounded shadow"
 					style="height: 10rem; background-color: #dbb;">
-					<a href="StudentList.action">学生管理</a>
+					<a href="StudentList.action">学生情報管理</a>
 				</div>
 				<div class="col d-flex align-items-center justify-content-center mx-2 rounded shadow"
 					style="height: 10rem; background-color: #bdb;">
 					<div>
-						<div class="">成績管理</div>
+						<div class="">成績情報管理</div>
 						<div class="">
 							<a href="TestRegist.action">成績登録</a>
 						</div>

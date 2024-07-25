@@ -1,7 +1,5 @@
 package scoremanager.main;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -27,6 +25,6 @@ public class SubjectDeleteAction extends Action{
 
 		req.setAttribute("sub_date", sub);
 
-		req.getRequestDispatcher("subject_delete.jsp").forward(req, res
+		req.getRequestDispatcher("subject_delete.jsp").forward(req, res);
 	}
 }

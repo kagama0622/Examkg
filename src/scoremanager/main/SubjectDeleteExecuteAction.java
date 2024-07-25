@@ -7,6 +7,7 @@ import bean.Subject;
 import dao.SubjectDao;
 import tool.Action;
 
+//科目情報・削除の情報取得後
 public class SubjectDeleteExecuteAction extends Action{
 
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception {

@@ -9,6 +9,7 @@ import bean.Teacher;
 import dao.SubjectDao;
 import tool.Action;
 
+//科目情報・削除の情報取得
 public class SubjectDeleteAction extends Action{
 
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception {

@@ -11,6 +11,7 @@ import bean.Teacher;
 import dao.SubjectDao;
 import tool.Action;
 
+//科目情報・一覧の情報取得
 public class SubjectListAction extends Action{
 
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception {

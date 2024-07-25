@@ -12,6 +12,7 @@ import bean.Teacher;
 import dao.SubjectDao;
 import tool.Action;
 
+//科目情報・作成の情報入力後
 public class SubjectCreateExecuteAction extends Action{
 
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception {
@@ -33,6 +34,7 @@ public class SubjectCreateExecuteAction extends Action{
 			errors.put("cd", "科目コードは3文字で入力してください");
 			req.setAttribute("errors", errors);
 			req.getRequestDispatcher("subject_create.jsp").forward(req, res);
+
 		// 科目コードの重複がある場合
 		} else if (hanbetu != null){
 			req.setAttribute("cd", cd);
@@ -40,14 +42,16 @@ public class SubjectCreateExecuteAction extends Action{
 			errors.put("cd", "科目コードが重複しています");
 			req.setAttribute("errors", errors);
 			req.getRequestDispatcher("subject_create.jsp").forward(req, res);
+
+		// エラー内容がない場合
+		} else {
+			Subject sub = new Subject();
+			sub.setCd(cd);
+			sub.setName(name);
+			sub.setSchool(teacher.getSchool());
+			jDao.save(sub);
+
 		}
-
-		Subject sub = new Subject();
-		sub.setCd(cd);
-		sub.setName(name);
-		sub.setSchool(teacher.getSchool());
-
-		boolean flag = jDao.save(sub);
 		req.getRequestDispatcher("subject_create_done.jsp").forward(req, res);
 	}
 }

@@ -9,6 +9,7 @@ import bean.Teacher;
 import dao.SubjectDao;
 import tool.Action;
 
+//科目情報・更新の情報の表示
 public class SubjectUpdateAction extends Action{
 
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception {
